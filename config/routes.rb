@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   devise_scope :users do
     get "users", to: "devise/sessions#new"
   end
+
+  get "users/id", to: "users#show", as: "user"
 end
